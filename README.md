@@ -40,6 +40,32 @@ Install all dependencies
 
 pip install -r requirements.txt
 
+
+Download the Million Song Dataset
+
+The app requires song lyrics data. Download the dataset from Kaggle:
+Million Song Dataset
+
+Place the CSV file (e.g., spotify_millsongdata.csv) in the project root folder.
+
+Ensure the file name matches what is used in preprocess.py.
+
+Preprocess the dataset
+
+Run the preprocessing script to clean and vectorize the lyrics:
+
+python preprocess.py
+
+
+This will generate the following files:
+
+df_cleaned.pkl – Cleaned song data
+
+tfidf_matrix.pkl – TF-IDF vectorized lyrics
+
+tfidf_vectorizer.pkl – TF-IDF vectorizer for mood analysis
+
+cosine_sim.pkl – Cosine similarity matrix
 ⚙️ Preprocess the Dataset
 
 Before running the app, execute the preprocessing script to prepare the data:
